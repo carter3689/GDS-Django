@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gcp-coursera-192004",
+  "private_key_id": "57449e843b7baa5b32b29fcc95e72a3e46b90429",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDlrfQNrw+SMlXc\n4g7j8OQsON7Ln8SU8+u0rjC40dLeoQH/UyJ6c7RWI8GM/zPFNf6aszqnGrtwDeAa\n1pkSboG9MyGBCrfSVdwcXZnH06PeL3tHCESYXyI80r1YSXJtBucU4w5dAce9QQ/F\n5PFxR8Vc+7xEfZ/B3nKtLJCOlYdQ3MRv6Gzq+zz0ARU8IT74CqytzNmvwax64Yq6\nIQII4Y28ac1K0kWDmJD+9gSbOfz1sN3uIo3TPD2a3DY9DtvyF5DYjAobgQmfPTm9\nZ2VDh/ESbQdM+YTSBJsfA7F9RsieucMacuLryLUcYQudrpMc/oexX9MRK9YYy5yG\n4SZKz+wrAgMBAAECggEACHTgMITKkPpzeN+F5tSewhYR9fNa/JUCj7N+Lb/kALhy\n52C7O0D5WdaVMMjQsikrx6xjs3Vjg1uvba2LE0eoVTwFtsebPw5UPWMg31+mf+7F\nnjbqt6WBEDY+LHr/0I3ZgkZd6ATBwvEbUJD+ZspatPK72tW5RR0YodGrPOS6h7qX\nUbHJe2yXzgtWA78FW+0Z+FzVUcbRgc7zCXjhscVQXeb+obxYPy+XHeBucQczWU0S\nKDhrw0ZpL1rLN+Mw5GrfIiEsIZC81oHjjtPkCuyUDMvQHod2sauvGTmpvtCDo2Qz\nWDfy7nfXU2QWcMUfqTS2sFx/74Men+O9DQE2bSd/qQKBgQD0JN82IsTKPaLjyVGY\nUkENQItA2vxP45MfW0rG39JxxGrmUPPunx0P4swCsX4mgQ0eziaowCQkY4/xgeiC\nvpL3VDQGz5EqXciznsPgYp8ZWLQgN4ufSDzjQC2oZlOCTexad95StXJnFqXCYDy/\nfD4Fktm4aZSUS7wxNl9WedM/twKBgQDw1UM6Qr2w67efWeAwrc09qrRQ8TBg39Mo\nK2QO9PeKz9rGOOPAgPxElok+jIRPxYsVqkRAWJDjc8XKBDQp7P3pFfnGiKKzTr7j\nMUNp2EANlJrIEYxSRKyVS0mSo+tFDXN4gSFU3NHRVvRGfyltG6xBgFIWaOJ2NaDg\nrfI5O54PLQKBgQDgnbe6r7xLsO9XEJYARNTSo2o6jf6KZX6q36vpUmzj/Gi5Yws5\no6vyPJ+jbrb4J8zxZYrNwJC/5dW9xN4sw7ak1BRVm8wbpVMMZmoh27oycJiv90p+\njdBu51HaV+JGxPhJt3SUtZj+XSi9rxrUtTK+n/+tGX33/cGzqSmHfueq+wKBgCjv\n11Gb7qqYJspLeLRNlsmYrrXjiZmt8jKtzYBNW5aY5lMzcGNUiY0PGZ0sPYFhztaL\n7rYRV++Rylkghc1qn25zcdWxfBaGmCP+R7tCKwEj9Xt0oCmLytpFxefLPT6rnqkp\nKgVG09OFuFgTXXNSdOFdcpaklXoKe6I1bysTWzaxAoGARemHy2+MRhb20UxURpL0\nucdXWik+XDs5Ul3C0kfGa2iLpNFXmloTAc2VBJIMRKiLkO4w58eeElwaLzQzItKl\n/bt+fDJrBAOjH152UMwMDWGmJA/Lg7v2+tj/ARwo7YZ7tlYeJoueaE6ZmAa+B9tU\nczRtvwxfKq9HMoEdGtdcNgA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "django-test@gcp-coursera-192004.iam.gserviceaccount.com",
+  "client_id": "113212088926745898528",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/django-test%40gcp-coursera-192004.iam.gserviceaccount.com"
+}

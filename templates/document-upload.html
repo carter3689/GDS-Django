@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Documents</title>
+  </head>
+  <body>
+    <form id="upload-docs" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" name="submitbutton" value="submit">
+    </form>
+
+
+    <script type="text/javascript" src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#upload-docs").submit(function(event){
+          console.log($("#upload-docs").serialize())
+          // var name = $("input[name='cusName']").val()
+          // console.log(name)
+        })
+      })
+
+        // $("input[name='cusName']").val()
+    </script>
+  </body>
+</html>

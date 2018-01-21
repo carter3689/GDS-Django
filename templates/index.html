@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Greater Demand Solutions</title>
+    <!-- FAVICON LINK -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <!-- FONT AWESOME LINK -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/font-awesome/css/font-awesome.min.css' %}">
+
+    <!-- IMAGE OVERLAY STYLE LINK  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/overlay/style.css' %}">
+    <!-- LIGHTBOX STYLE LINK -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/vendor/lightbox/ekko-style.css' %}">
+
+    <!-- CAROUSEL STYLE LINK -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/carousel.css">
+
+    <!-- W3 Cards CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom/style_blue.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!--ANGULARJS SCRIPT -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js" charset="utf-8"></script>
+    <script src="js/app/app.js" charset="utf-8"></script>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-fixed-top" data-offset="75" ng-app="gdsMain">
+
+
+    <!--================================= NAVIGATION START =============================================-->
+    <nav class="navbar navbar-default navbar-fixed-top menu-bg" id="top-nav">
+        <div class="container">
+            <div class="navigation-tb">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div>
+                       <a href="#" class = "grooveshark">Greater Demand Solutions</a>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right" id="menu-list">
+                        <li class="menu-fs menu-underline"><a href="#home" class="pagescroll">home</a>
+                        </li>
+                        <li class="menu-fs menu-underline"><a href="#services" class="pagescroll">services</a>
+                        </li>
+                        <li class="menu-fs menu-underline"><a href="#schedule" class="pagescroll">schedule</a>
+                        </li>
+                        <li class="menu-fs menu-underline"><a href="#speakers" class="pagescroll"> events</a>
+                        </li>
+                        <li class="menu-fs menu-underline"><a href="#speakers" class="pagescroll"> speakers</a>
+                        </li>
+                        <li class="menu-fs menu-underline"><a href="#faq" class="pagescroll"> faq</a>
+                        </li>
+                        <li class="menu-fs menu-underline"><a href="#speakers" class="pagescroll"> contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--================================= NAVIGATION END =============================================-->
+
+  <!--================================= HEADER-2 START =============================================-->
+    <section class="container-fluid video-underline header-section-space" id="home">
+        <video autoplay muted loop id="myVideo">
+          <source src="{% static 'video/background.mp4' %}" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="col-md-8 col-sm-8 header-white-text common-res-bottom-1 header2-right">
+                <h2 class="left header-head1 header-head-bottom">Greater Demand Solutions </h2>
+                <h1 class="left header-head2 header-head-bottom">Business Consulting / Income & Business Taxes</h1>
+                <p class="left header-content">Welcome to Greater Demand Solutions! Greater Demand Solutions was established in 2010 by CEO Tasha Williams Robinson. While developing GDS, she saw how hard it was for a small business owner to become established.It was then, she decided to take her own business experiences to help other businesses to grow and thrive. We are a firm that provides small business consulting and marketing services. We pride ourselves in being a one-stop-shop for all of your individual and business needs.</p>
+                <div class="left btn-top">
+                    <a href="#">
+                        <div class="btn-1">READ MORE</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--================================= HEADER-2 END =============================================-->
+
+	 <!--================================= OUR SERVICES START =============================================-->
+    <section class="container-fluid section-space section-bg-1" id="services" ng-controller="ourServices">
+        <div class="container">
+            <h1 class="center">our services</h1>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-icon">
+                    </div>
+                    <div class="w3-card-4">
+                          <header class="w3-container w3-light-grey">
+                            <h1>Tax Services</h1>
+                          </header>
+                          <div class="w3-container" ng-repeat="tax in services.taxes">
+                            <ul>
+                              <li ng-cloak>{{tax}}</li>
+                            </ul>
+                          </div>
+                          <footer class="w3-container w3-white">
+                          </footer>
+                      </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-icon">
+                    </div>
+                    <div class="w3-card-4">
+                          <header class="w3-container w3-light-grey">
+                            <h1>Bookkeeping</h1>
+                          </header>
+                          <div class="w3-container" ng-repeat="books in services.bookkeeping">
+                            <ul>
+                              <li ng-cloak>{{books}}</li>
+                            </ul>
+                          </div>
+                          <footer class="w3-container w3-white">
+                          </footer>
+                      </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="services-icon">
+                    </div>
+                    <div class="w3-card-4">
+                          <header class="w3-container w3-light-grey">
+                            <h1>Consulting</h1>
+                          </header>
+                          <div class="w3-container" ng-repeat="consult in services.consulting">
+                            <ul>
+                              <li ng-cloak>{{consult}}</li>
+                            </ul>
+                          </div>
+                          <footer class="w3-container w3-white">
+                          </footer>
+                      </div>
+                </div>
+                <!-- <div class="bottom-cards-wrapper">
+                  <div class="col-md-4 col-sm-6">
+                    <div class="w3-card-4">
+                          <header class="w3-container w3-light-grey">
+                            <h1>Header</h1>
+                          </header>
+                          <div class="w3-container">
+                            <p>Lorem ipsum...</p>
+                          </div>
+                          <footer class="w3-container w3-white">
+                            <h5>Footer</h5>
+                          </footer>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="w3-card-4">
+                          <header class="w3-container w3-light-grey">
+                            <h1>Header</h1>
+                          </header>
+                          <div class="w3-container">
+                            <p>Lorem ipsum...</p>
+                          </div>
+                          <footer class="w3-container w3-white">
+                            <h5>Footer</h5>
+                          </footer>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4 col-sm-6">
+                    <div class="w3-card-4">
+                          <header class="w3-container w3-light-grey">
+                            <h1>Header</h1>
+                          </header>
+                          <div class="w3-container">
+                            <p>Lorem ipsum...</p>
+                          </div>
+                          <footer class="w3-container w3-white">
+                            <h5>Footer</h5>
+                          </footer>
+                      </div> -->
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================================= OUR SERVICES END =============================================-->
+
+	 <!--================================= COUNTER START =============================================-->
+    <div class="container-fluid video-underline counter-section-space">
+      <h1 class="accomplishments">Accomplishments</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6 counter-res-bottom">
+                    <div class="center image-bottom">
+                        <img src="images/64x64x7.png" alt="icon" />
+                    </div>
+                    <p class="center counter-num count">3000</p>
+                    <p class="center counter-sub">SPEAKERS </p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6 counter-res-bottom">
+                    <div class="center image-bottom">
+                        <img src="images/64x64x8.png" alt="icon" />
+                    </div>
+                    <p class="center counter-num count">5296</p>
+                    <p class="center counter-sub">WORKSHOPS</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="center image-bottom">
+                        <img src="images/64x64x9.png" alt="icon" />
+                    </div>
+                    <p class="center counter-num count">8596 </p>
+                    <p class="center counter-sub">TICKETS</p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="center image-bottom">
+                        <img src="images/64x64x10.png" alt="icon" />
+                    </div>
+                    <p class="center counter-num count">402</p>
+                    <p class="center counter-sub">AWARDS </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================================= COUNTER END =============================================-->
+
+	<!--================================= SCHEDULE-3 START =============================================-->
+
+  <!-- <iframe src="https://app.acuityscheduling.com/schedule.php?owner=14857229" width="100%" height="800" frameBorder="0"></iframe> -->
+    <section class="container-fluid section-space section-bg-1" id="schedule">
+        <div class="container">
+
+          <div id="bookingjs"></div> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script> <script src="https://cdn.timekit.io/booking-js/v1/booking.min.js" defer></script> <script>window.timekitBookingConfig = { widgetId: '8e7c82cc-cc0a-4e4b-8cd3-9a8ed4c4ee1f' }</script>
+  <script type="text/javascript">
+    var widget = new TimekitBooking();
+    widget.init({
+      app:      'greater-demand-solutions',
+      email:    'joelc@doubleedgesoftware.com',
+      apiToken: 'uR0o9mWNo9eGvofrFsF2PQWi8EaDMMgS',
+      calendar: '7f041c9e-4277-4e4d-a86e-6ad839802cb6'
+    });
+  </script>
+</div>
+    </section>
+    <!--================================= SCHEDULE-3 END =============================================-->
+
+	 <!--================================= BOOK TICKETS START =============================================-->
+    <section class="container-fluid section-space section-bg-2">
+        <div class="container">
+            <h1 class="center">book tickets</h1>
+            <div class="row res-tickets-h2">
+                <div class="col-md-3 col-sm-6 col-xs-6 res-book-bottom common-full-1 ">
+                    <div class="tickets-bg tickets-shadow">
+                        <div class="tickets-center">
+                            <div class="distab-cell-middle tickets-pad">
+                                <p class="center tickets count">21</p>
+                                <h2 class="center">speakers</h2>
+                            </div>
+
+                            <div class="distab-cell-middle">
+                                <img src="images/64x64x11.png" alt="icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6 res-book-bottom common-full-1 ">
+                    <div class="tickets-bg tickets-shadow">
+                        <div class="tickets-center">
+                            <div class="distab-cell-middle tickets-pad">
+                                <p class="center tickets count">10</p>
+                                <h2 class="center">sessions</h2>
+                            </div>
+
+                            <div class="distab-cell-middle">
+                                <img src="images/64x64x12.png" alt="icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6 common-full-1 res-book-bottom-1">
+                    <div class="tickets-bg tickets-shadow">
+                        <div class="tickets-center">
+                            <div class="distab-cell-middle tickets-pad">
+                                <p class="center tickets count">500</p>
+                                <h2 class="center">tickets</h2>
+                            </div>
+
+                            <div class="distab-cell-middle">
+                                <img src="images/64x64x13.png" alt="icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6 common-full-1 ">
+                    <div class="tickets-bg tickets-shadow">
+                        <div class="tickets-center">
+                            <div class="distab-cell-middle tickets-pad">
+                                <p class="center tickets count">21</p>
+                                <h2 class="center">awards</h2>
+                            </div>
+
+                            <div class="distab-cell-middle">
+                                <img src="images/64x64x14.png" alt="icon" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--================================= BOOK TICKETS END =============================================-->
+
+	 <!--================================= OUR SPEAKERS START =============================================-->
+    <section class="container-fluid section-space section-bg-1" id="speakers">
+        <div class="container">
+            <h1 class="center">our speakers</h1>
+            <div class="row">
+                <div class="col-md-3 col-sm-3 team-fixed common-res-bottom-1">
+                    <div class="teambg">
+                        <div class="zoom-area">
+                            <img src="images/400x400x1.jpg" alt="image" class="img-responsive image-center find-image" />
+                        </div>
+                        <div class="center teambg-icon-pad">
+                            <ul class="no-padding no-margin">
+                                <li class="team-social-icon">
+                                    <a href="#">
+                                        <img src="images/32x32x1.png" alt="32x32x1" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x2.png" alt="32x32x2" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x3.png" alt="32x32x3" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 class="center h2-bottom">varius sodales</h2>
+                    <p class="center teambg-design">CEO </p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 team-fixed common-res-bottom-1">
+                    <div class="teambg">
+                        <div class="zoom-area">
+                            <img src="images/400x400x2.jpg" alt="image" class="img-responsive image-center find-image" />
+                        </div>
+                        <div class="center teambg-icon-pad">
+                            <ul class="no-padding no-margin">
+                                <li class="team-social-icon">
+                                    <a href="#">
+                                        <img src="images/32x32x1.png" alt="32x32x1" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x2.png" alt="32x32x2" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x3.png" alt="32x32x3" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 class="center h2-bottom">taciti sociosqu</h2>
+                    <p class="center teambg-design">MANAGER </p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 team-fixed common-res-bottom-1">
+                    <div class="teambg">
+                        <div class="zoom-area">
+                            <img src="images/400x400x3.jpg" alt="image" class="img-responsive image-center find-image" />
+                        </div>
+                        <div class="center teambg-icon-pad">
+                            <ul class="no-padding no-margin">
+                                <li class="team-social-icon">
+                                    <a href="#">
+                                        <img src="images/32x32x1.png" alt="32x32x1" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x2.png" alt="32x32x2" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x3.png" alt="32x32x3" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 class="center h2-bottom">litora tourent</h2>
+                    <p class="center teambg-design">DESIGNER </p>
+                </div>
+
+                <div class="col-md-3 col-sm-3 team-fixed">
+                    <div class="teambg">
+                        <div class="zoom-area">
+                            <img src="images/400x400x4.jpg" alt="image" class="img-responsive image-center find-image" />
+                        </div>
+                        <div class="center teambg-icon-pad">
+                            <ul class="no-padding no-margin">
+                                <li class="team-social-icon">
+                                    <a href="#">
+                                        <img src="images/32x32x1.png" alt="32x32x1" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x2.png" alt="32x32x2" />
+                                    </a>
+                                </li>
+
+                                <li class="team-social-icon team-social-lr-pad">
+                                    <a href="#">
+                                        <img src="images/32x32x3.png" alt="32x32x3" />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h2 class="center h2-bottom">conubia nostra</h2>
+                    <p class="center teambg-design">DEVELOPER </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--================================= OUR SPEAKERS END =============================================-->
+
+	 <!--================================= UPCOMING EVENTS START =============================================-->
+    <section class="container-fluid section-space section-bg-2">
+        <div class="container">
+            <h1 class="center">upcoming events</h1>
+            <div class="row common-row-space">
+                <div class="col-md-2 col-sm-3 col-xs-4 upcoming-res-bottom event-fixed">
+                    <div class="upcoming-events-bg events-shadow">
+                        <p class="center events-num">05</p>
+                        <h2 class="center">FEB</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-9 col-xs-8 common-fixed-full upcoming-res-bottom-1">
+                    <div>
+                        <h2 class="left h2-bottom res-text-center-2"><a href="#">heading</a></h2>
+                        <p class="left res-text-center-2">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper </p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-xs-4 upcoming-clear event-fixed ">
+                    <div class="upcoming-events-bg events-shadow">
+                        <p class="center events-num">14</p>
+                        <h2 class="center">FEB</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-9 col-xs-8 common-fixed-full">
+                    <div>
+                        <h2 class="left h2-bottom res-text-center-2"><a href="#">heading</a></h2>
+                        <p class="left res-text-center-2">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-sm-3 col-xs-4 upcoming-res-bottom event-fixed">
+                    <div class="upcoming-events-bg events-shadow">
+                        <p class="center events-num">07</p>
+                        <h2 class="center">MAR</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-9 col-xs-8 common-fixed-full upcoming-res-bottom-1">
+                    <div>
+                        <h2 class="left h2-bottom res-text-center-2"><a href="#">heading</a></h2>
+                        <p class="left res-text-center-2">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper</p>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-3 col-xs-4 upcoming-clear event-fixed">
+                    <div class="upcoming-events-bg events-shadow">
+                        <p class="center events-num">22</p>
+                        <h2 class="center">MAR</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-9 col-xs-8 common-fixed-full">
+                    <div>
+                        <h2 class="left h2-bottom res-text-center-2"><a href="#">heading</a></h2>
+                        <p class="left res-text-center-2">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================================= UPCOMING EVENTS END =============================================-->
+
+	 <!--================================= VENUE START =============================================  -->
+    <section class="container-fluid section-space section-bg-1">
+        <div class="container">
+            <h1 class="center">venue</h1>
+            <div class="row">
+                <div class="col-md-8 common-res-bottom common-res-bottom-1">
+                    <iframe class="venue-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988853.8283661404!2d-109.79819478383385!3d42.98243242389649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875ee23448e12e69%3A0x26b02279d27d382f!2sWyoming%2C+USA!5e0!3m2!1sen!2sin!4v1444977908624"></iframe>
+                </div>
+                <div class="col-md-4 venue-res-all venue-address-ls">
+                    <h2 class="left h2-bottom">brown palace hotel</h2>
+                    <p class="left venue-address-bottom">123, Green Garden Street, </p>
+                    <p class="left venue-address-bottom">Texas, USA </p>
+                    <p class="left venue-row-space">+1-541-754-3010</p>
+
+                    <h2 class="left h2-bottom">loews regency</h2>
+                    <p class="left venue-address-bottom">123, Green Garden Street, </p>
+                    <p class="left venue-address-bottom">Texas, USA </p>
+                    <p class="left venue-row-space">+1-541-754-3010</p>
+
+                    <h2 class="left h2-bottom">orlando hotel</h2>
+                    <p class="left venue-address-bottom">123, Williams Avenue, </p>
+                    <p class="left venue-address-bottom">72 First Street, Branford - 32008 </p>
+                    <p class="left">+1-435-756-5647</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================================= VENUE END =============================================-->
+
+	  <!--================================= TEAM VACATION START =============================================-->
+    <section class="container-fluid section-space section-bg-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-push-6 res-image-bottom-lunch res-image-bottom-1">
+                    <div class="left">
+                        <img src="images/750x500x13_corporate2.jpg" alt="image" class="img-responsive" />
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-md-pull-6">
+                    <h2 class="left h2-bottom"><a href="#">team vacation</a></h2>
+                    <p class="left p-bottom">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper eros viverra suscipit. End of content.Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper eros viverra suscipit. End of content</p>
+                    <p class="left p-bottom">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper eros viverra suscipit. End of content.Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+
+                    <p class="left">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper eros viverra suscipit. End of content.Donec varius sodales orci.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--================================= TEAM VACATION END =============================================-->
+
+	<!--================================= FREQUENTLY ASKED QUESTIONS START =============================================-->
+    <section class="container-fluid section-space section-bg-1" id="faq">
+        <div class="container">
+            <h1 class="center">frequently asked questions</h1>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 res-faq-bottom">
+                    <div class="faq-row-bottom">
+                        <h2 class="left h2-bottom"><a href="#">donec varius sodales orci?</a></h2>
+                        <p class="left">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper.</p>
+                    </div>
+                    <div>
+                        <h2 class="left h2-bottom"><a href="#">class aptent taciti sociqu?</a></h2>
+                        <p class="left">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <div class="faq-row-bottom">
+                        <h2 class="left h2-bottom"><a href="#">litora torquent per conubia?</a></h2>
+                        <p class="left">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper.</p>
+                    </div>
+                    <div>
+                        <h2 class="left h2-bottom"><a href="#">ullamcorper eros viverra?</a></h2>
+                        <p class="left">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center btn-top">
+                <a href="#">
+                    <div class="btn-1">READ MORE</div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--================================= FREQUENTLY ASKED QUESTIONS END =============================================-->
+
+	 <!--================================= CTA START =============================================-->
+    <section class="container-fluid gds-background cta-section-space">
+        <div class="container">
+            <div class="col-md-10 column-center no-padding cta-white-text">
+                <h1 class="center">ready to get to work? </h1>
+                <p class="center">Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper eros viverra suscipit. End of content.Donec varius sodales orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean a arcu ullamcorper eros viverra suscipit. End of content.</p>
+                <div class="center btn-top">
+                    <a href="#">
+                        <!-- <a href="https://app.acuityscheduling.com/schedule.php?owner=14857229" target="_blank" class="acuity-embed-button" style="background: #3177CA; color: #fff; padding: 8px 12px; border: 0px; -webkit-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;-moz-box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;box-shadow: 0 -2px 0 rgba(0,0,0,0.15) inset;border-radius: 4px; text-decoration: none; display: inline-block;">Schedule Appointment</a><link rel="stylesheet" href="https://embed.acuityscheduling.com/embed/button/14857229.css" id="acuity-button-styles" /><script src="https://embed.acuityscheduling.com/embed/button/14857229.js" async></script> -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================================= CTA END =============================================-->
+
+    <!--================================= FOOTER START =============================================-->
+    <section class="container-fluid section-space section-bg-1">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-6 res-common-space-1 common-res-bottom-1">
+                    <h2 class="left h2-bottom footer-contact">contact</h2>
+                    <div class="left form-error-bottom footer-contact" id="messageDiv"> <span class="form-success" id="sucessMessage"> </span> <span class="form-failure" id="failMessage"> </span>
+                    </div>
+                    <div class="contact-div">
+                        <form id="contact-form" method="POST">
+                            <div class="clearfix">
+                                <div class="form-div form-bottom-1">
+                                    <input class="form-control form-text" id="name" type="text" name="name" value="" placeholder="Please Enter Name" required />
+                                </div>
+
+                                <div class="form-div form-bottom-1">
+                                    <input class="form-control form-text" id="email" type="email" name="email" value="" placeholder="Please Enter Email" required />
+                                </div>
+
+                                <div class="form-div-1">
+                                    <textarea class="form-control form-text" id="message" name="message" placeholder="message" rows="4" required></textarea>
+                                </div>
+                                <div class="distab submit-reset">
+                                    <div class="distab-cell-middle submit-right-pad">
+                                        <input type="submit" class="btn-1" id="submit" name="submit" value="SUBMIT">
+                                    </div>
+
+                                    <button type="reset" class="btn-1 distab-cell-middle">RESET</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6">
+                    <h2 class="center h2-bottom">address</h2>
+                    <p class="center footer-row-space ls">123 6th Street Melbourne, FL 32904</p>
+                    <h2 class="center h2-bottom">phone no</h2>
+                    <p class="center footer-row-space ls">+756 859 5464, +254 758 4579</p>
+
+                    <h2 class="center h2-bottom">follow us</h2>
+
+
+                    <div class="center">
+                        <ul class="no-padding no-margin">
+                            <li class="footer-icon">
+                                <a href="#">
+                                    <img src="images/48x48x1.png" alt="48x48x1" />
+                                </a>
+                            </li>
+
+                            <li class="footer-icon footer-lr-pad">
+                                <a href="#">
+                                    <img src="images/48x48x2.png" alt="48x48x2" />
+                                </a>
+                            </li>
+
+                            <li class="footer-icon footer-lr-pad">
+                                <a href="#">
+                                    <img src="images/48x48x3.png" alt="48x48x3" />
+                                </a>
+                            </li>
+
+                            <li class="footer-icon footer-lr-pad">
+                                <a href="#">
+                                    <img src="images/48x48x4.png" alt="48x48x4" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-br footer-br-bottom"></div>
+            <p class="center ls">&copy; 2017, All Rights Reserved</p>
+        </div>
+    </section>
+    <!--================================= FOOTER END =============================================-->
+
+    <!-- PAYPAL INTEGRATION FORM START -->
+
+
+    <div id="fade"></div>
+    <!-- PAYPAL INTEGRATION FORM END -->
+
+    <!-- JQUERY LIBRARY -->
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <!-- BOOTSTRAP -->
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+
+
+    <!-- COUNTER JS FILES -->
+    <script type="text/javascript" src="js/vendor/counter/counter-lib.js"></script>
+    <script type="text/javascript" src="js/vendor/counter/jquery.counterup.min.js"></script>
+    <script type="text/javascript" src="js/vendor/counter/counter.js"></script>
+
+    <!-- IMAGE OVERLAY JS FILE -->
+    <script type="text/javascript" src="js/vendor/img-overlay/modernizr.js"></script>
+    <script type="text/javascript" src="js/vendor/img-overlay/overlay.js"></script>
+    <!-- LIGHT BOX GALLERY -->
+    <script type="text/javascript" src="js/vendor/lightbox/ekko-lightbox.js"></script>
+    <script type="text/javascript" src="js/vendor/lightbox/lightbox.js"></script>
+    <!-- SLIDER JS FILES -->
+    <script type="text/javascript" src="js/vendor/slider/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/vendor/slider/carousel.js"></script>
+    <!-- SUBSCRIBE MAILCHIMP -->
+    <script type="text/javascript" src="js/vendor/subscribe/subscribe_validate.js"></script>
+    <!-- VALIDATION  -->
+    <script type="text/javascript" src="js/vendor/validate/jquery.validate.min.js"></script>
+    <!-- POPUP JS -->
+    <script type="text/javascript" src="js/vendor/popup/jquery.popupoverlay.js"></script>
+    <!-- COUNTDOWN JS  -->
+    <script type="text/javascript" src="js/vendor/countdown/countdown.js"></script>
+    <!-- PHONE_NUMBER VALIDATION JS -->
+    <script type="text/javascript" src="js/vendor/phone_number/phone_number.js"></script>
+
+    <!-- VIDEO JS -->
+    <script type="text/javascript" src="js/vendor/video/video.js"></script>
+
+    <!-- THEME JS -->
+    <script type="text/javascript" src="js/custom/custom.js"></script>
+
+    <!--SCHEDULE SCRIPT -->
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.timekit.io/booking-js/v1/booking.min.js" defer></script>
+</body>
+
+</html>
