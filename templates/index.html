@@ -36,7 +36,7 @@
 
     <!--ANGULARJS SCRIPT -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js" charset="utf-8"></script>
-    <script src="js/app/app.js" charset="utf-8"></script>
+    <script src="{% static 'js/app/app.js' %}" charset="utf-8"></script>
 
 
 </head>
@@ -104,6 +104,7 @@
     <!--================================= HEADER-2 END =============================================-->
 
 	 <!--================================= OUR SERVICES START =============================================-->
+   {% verbatim %}
     <section class="container-fluid section-space section-bg-1" id="services" ng-controller="ourServices">
         <div class="container">
             <h1 class="center">our services</h1>
@@ -158,52 +159,12 @@
                           </footer>
                       </div>
                 </div>
-                <!-- <div class="bottom-cards-wrapper">
-                  <div class="col-md-4 col-sm-6">
-                    <div class="w3-card-4">
-                          <header class="w3-container w3-light-grey">
-                            <h1>Header</h1>
-                          </header>
-                          <div class="w3-container">
-                            <p>Lorem ipsum...</p>
-                          </div>
-                          <footer class="w3-container w3-white">
-                            <h5>Footer</h5>
-                          </footer>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-6">
-                    <div class="w3-card-4">
-                          <header class="w3-container w3-light-grey">
-                            <h1>Header</h1>
-                          </header>
-                          <div class="w3-container">
-                            <p>Lorem ipsum...</p>
-                          </div>
-                          <footer class="w3-container w3-white">
-                            <h5>Footer</h5>
-                          </footer>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4 col-sm-6">
-                    <div class="w3-card-4">
-                          <header class="w3-container w3-light-grey">
-                            <h1>Header</h1>
-                          </header>
-                          <div class="w3-container">
-                            <p>Lorem ipsum...</p>
-                          </div>
-                          <footer class="w3-container w3-white">
-                            <h5>Footer</h5>
-                          </footer>
-                      </div> -->
                   </div>
                 </div>
             </div>
         </div>
     </section>
+    {% endverbatim %}
     <!--================================= OUR SERVICES END =============================================-->
 
 	 <!--================================= COUNTER START =============================================-->
