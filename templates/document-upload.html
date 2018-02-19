@@ -10,10 +10,43 @@
     {% csrf_token %}
     {{form.as_p}}
     <input type="submit" name="submitbutton" value="submit">
+    <button id = "upload" type="button" name="button">Upload Documents</button>
+    <button id = "download" type="button" name="button">download Documents</button>
     </form>
 
 
     <script type="text/javascript" src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="https://static.filestackapi.com/v3/filestack.js"></script>
+    <script type="text/javascript" src="{% static 'js/download.js' %}"></script>
+    <script type="text/javascript">
+   $(document).ready(function(){
+        var name = $('#id_name').val()
+        var title = $('#id_titleofdocument').val()
+        var service = $('#id_service').val()
+        var file = $('id_doc_file').val()
+        const client = filestack.init('AtX4SgHdWQNuh7lHEyx7Dz'); //[{storeTo: {path: '/'+ name + '/'+ file}}]
+        $('#upload').click(function(){
+          client.pick();
+      })
+      $("#download").click(function(){
+        $.ajax({
+          url:"https://www.filestackapi.com/api/file/ElvhwPITRnyvbiNgW52e",
+          type:'GET',
+          contentType:'application/pdf',
+          success:download.bind(true,"test_doc.pdf")
+            // var blob = new Blob([data]);
+            // var link = document.createElement('a');
+            // link.href = window.URL.createObjectURL(blob);
+            // link.download = "This_is_a_test.pdf";
+            // link.click()
+          // },
+          // error:function(){
+          //   console.log("Didn't get anything back")
+          // }
+        })
+      })
+    })
+    </script>
     <script type="text/javascript">
       $(document).ready(function(){
         $("#upload-docs").submit(function(event){

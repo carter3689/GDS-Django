@@ -5,6 +5,10 @@ from django.http import HttpResponseRedirect,HttpResponse
 from google.cloud import storage
 import google.auth
 
+#FileStack Import
+from filestack import Client
+import locale
+
 from datetime import datetime
 
 #Documents Model import
@@ -12,12 +16,17 @@ from .models import CustomerDocuments
 
 doc_info = CustomerDocuments.objects.all()
 
-def upload_documents(bucket_name,source_file_name,destination_blob_name):
-    storage_client = storage.Client()
-    storage_bucket = storage_client.get_bucket(bucket_name)
-    blob = storage_bucket.blob(destination_blob_name)
-    blob.upload_from_string(source_file_name)
-    print("Document Uploaded")
+# def upload_documents(bucket_name,source_file_name,destination_blob_name):
+#     storage_client = storage.Client()
+#     storage_bucket = storage_client.get_bucket(bucket_name)
+#     blob = storage_bucket.blob(destination_blob_name)
+#     blob.upload_from_string(source_file_name)
+#     print("Document Uploaded")
+
+def upload_documents(Filename, Bucket, Key):
+    #AWS Upload
+    s3 = boto3.resource('s3')
+    s3.meta.client.upload_file()
 
 def download_documents(bucket_name,source_file_name,destination_file_name):
     """Downloading objects(files) from bucket in Google Cloud Storage"""
@@ -36,13 +45,14 @@ def get_upload(request):
 
     if request.method == 'POST':
         #create a form instance populated with data -- (Bound to the data previously entered that might need correction)
+        locale.getdefaultlocale()
         name = request.POST['name']
         titleofdocument = request.POST['titleofdocument']
         doc_file = request.FILES['doc_file'].read()
         doc_file2 = request.FILES['doc_file']
         name_of_file = doc_file2.name
         print(doc_file)
-        fullUpload = name + "-" + titleofdocument + "-" + name_of_file
+        fullUpload = name + "/" + titleofdocument + "/" + name_of_file
         print(titleofdocument,name,doc_file)
         print(fullUpload)
         form = DocumentUpload(request.POST,request.FILES)
@@ -52,7 +62,7 @@ def get_upload(request):
         cusDocRecord.service = request.POST['service']
         cusDocRecord.date = datetime.now()
         cusDocRecord.save()
-        upload_documents("upload_documents",doc_file,fullUpload)
+        upload_documents(doc_file)
         if HttpResponse == 200:
             return (request, 'success.html')
 

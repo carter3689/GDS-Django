@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'documents'
+    'documents',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
     ]
+
+#DEFAULT STORAGE FOR DJANGO-STORAGES
+DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+GS_BUCKET_NAME = 'upload_documents'
 
 # GOOGLE CLOUD ENVIRONMENT VARIABLE
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(BASE_DIR,"GCP-Coursera-57449e843b7b.json")
