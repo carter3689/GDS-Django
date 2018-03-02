@@ -20,10 +20,10 @@ from django.urls import path
 from gdsmain import views
 
 #Documents Views
-from documents.views import get_upload,download_objects
+from documents.views import get_upload,download_handler
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.HomePage.as_view(),name="index"),
     path('upload-documents/',get_upload,name = "document-upload"),
-    path('download-documents/',download_objects,name = "document-download")
+    path('download-documents/',download_handler,name = "document-download")
 ]

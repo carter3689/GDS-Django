@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'documents',
     'storages',
+    'filetransfers',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,7 @@ GS_BUCKET_NAME = 'upload_documents'
 
 # GOOGLE CLOUD ENVIRONMENT VARIABLE
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.join(BASE_DIR,"GCP-Coursera-57449e843b7b.json")
+
+SERVE_FILE_BACKEND = 'filetransfers.backends.default.serve_file'
+PUBLIC_DOWNLOAD_URL_BACKEND = 'filetransfers.backends.default.public_download_url'
+PUBLIC_DOWNLOADS_URL_BASE = '/downloads/'
