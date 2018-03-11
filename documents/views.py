@@ -95,6 +95,7 @@ def get_upload(request):
 
 def download_handler(request, pk):
     upload = get_object_or_404(UploadModel, pk=pk)
+    print(upload)
     return public_download_url(request, upload.file)
     # client = Client('AtX4SgHdWQNuh7lHEyx7Dz')
     # client.zip(destination_path = 'cdn.filestackcontent.com/', files = ['ElvhwPITRnyvbiNgW52e',"IOZ4Dxl9QPe5HQXPoRdB"])

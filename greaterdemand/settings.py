@@ -26,7 +26,7 @@ SECRET_KEY = 'r2x_5958ww-a-48t@*k*$zx81r8uy@vpy2n7zs7yl@6y+82w65'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -125,10 +125,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'https://storage.googleapis.com/test-django-static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
     ]
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #DEFAULT STORAGE FOR DJANGO-STORAGES
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'

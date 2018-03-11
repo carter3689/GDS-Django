@@ -7,5 +7,5 @@
 </form>
 
 {% load filetransfers %}
-{% url upload.views.download_handler pk=upload.pk as fallback_url %}
-<a href="{% firstof upload.file|public_download_url fallback_url %}">Download</a>
+{% url 'document-download' pk=upload.pk as fallback_url %}
+<a href="{% url 'document-download' pk=upload.pk %}">Download</a>

@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,re_path
 
 #Main views imports
 from gdsmain import views
@@ -25,5 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.HomePage.as_view(),name="index"),
     path('upload-documents/',get_upload,name = "document-upload"),
-    path('download-documents/',download_handler,name = "document-download")
+    re_path(r'^download-documents/(?P<pk>\d+)/$',download_handler,name = "document-download")
 ]
