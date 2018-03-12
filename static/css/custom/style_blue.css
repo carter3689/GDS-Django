@@ -1867,3 +1867,13 @@ select.error {
     }
 }
 /*========================================== MEDIA QUERY END =========================================*/
+
+
+/*TAX SEASON CSS */
+.spacing{
+  padding:27px;
+}
+
+.getstarted{
+  background-color:white;
+}
