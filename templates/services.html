@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--================================= OUR SERVICES START =============================================-->
+{% verbatim %}
+ <section class="container-fluid section-space section-bg-1" id="services" ng-controller="ourServices">
+     <div class="container">
+         <h1 class="center">Tax Season – SIMPLIFIED</h1>
+         <h2 class="center spacing">Whether you’re a longtime client or brand new to GDS, don’t worry, we’ve got you covered!</h2>
+         <div class="row">
+             <div class="col-md-6 col-sm-6">
+                 <div class="services-icon">
+                 </div>
+                 <div class="w3-card-4">
+                       <header class="w3-container w3-light-grey">
+                         <h1>We Offer</h1>
+
+                       </header>
+                       <div class="w3-container" ng-repeat="tax in services.taxes">
+                         <ul>
+                           <li ng-cloak>{{tax}}</li>
+                         </ul>
+                       </div>
+                       <footer class="w3-container w3-white">
+                       </footer>
+                   </div>
+             </div>
+
+             <div class="col-md-6 col-sm-6">
+                 <div class="services-icon">
+                 </div>
+                 <div class="w3-card-4">
+                       <header class="w3-container w3-light-grey">
+                         <h1>In return, you can receive</h1>
+                       </header>
+                       <div class="w3-container" ng-repeat="books in services.bookkeeping">
+                         <ul>
+                           <li ng-cloak>{{books}}</li>
+                         </ul>
+                       </div>
+                       <footer class="w3-container w3-white">
+                       </footer>
+                   </div>
+             </div>
+               </div>
+             </div>
+         </div>
+     </div>
+ </section>
+ {% endverbatim %}
+ <!--================================= OUR SERVICES END =============================================-->
+{% endblock %}

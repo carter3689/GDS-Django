@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--================================= HEADER-2 START =============================================-->
+  <section class="container-fluid video-underline header-section-space" id="home">
+      <video autoplay muted loop id="myVideo">
+        <source src="{% static 'video/background.mp4' %}" type="video/mp4">
+      </video>
+      <div class="container">
+          <div class="col-md-8 col-sm-8 header-white-text common-res-bottom-1 header2-right">
+              <h2 class="left header-head1 header-head-bottom">Greater Demand Solutions </h2>
+              <h1 class="left header-head2 header-head-bottom">Business Consulting / Income & Business Taxes</h1>
+              <p class="left header-content">Welcome to Greater Demand Solutions! Greater Demand Solutions was established in 2010 by CEO Tasha Williams Robinson. While developing GDS, she saw how hard it was for a small business owner to become established.It was then, she decided to take her own business experiences to help other businesses to grow and thrive. We are a firm that provides small business consulting and marketing services. We pride ourselves in being a one-stop-shop for all of your individual and business needs.</p>
+              <div class="left btn-top">
+                  <a href="#">
+                      <div class="btn-1">READ MORE</div>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+  </section>
+  <!--================================= HEADER-2 END =============================================-->
+{% endblock %}
