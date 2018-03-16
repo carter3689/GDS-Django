@@ -129,7 +129,7 @@ STATIC_URL = 'https://storage.googleapis.com/test-django-static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
     ]
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #DEFAULT STORAGE FOR DJANGO-STORAGES
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'

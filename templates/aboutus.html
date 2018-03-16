@@ -1,133 +1,109 @@
 <!--================================= OUR SPEAKERS START =============================================-->
- <section class="container-fluid section-space section-bg-1" id="speakers">
-     <div class="container">
-         <h1 class="center">our speakers</h1>
-         <div class="row">
-             <div class="col-md-3 col-sm-3 team-fixed common-res-bottom-1">
-                 <div class="teambg">
-                     <div class="zoom-area">
-                         <img src="images/400x400x1.jpg" alt="image" class="img-responsive image-center find-image" />
-                     </div>
-                     <div class="center teambg-icon-pad">
-                         <ul class="no-padding no-margin">
-                             <li class="team-social-icon">
-                                 <a href="#">
-                                     <img src="images/32x32x1.png" alt="32x32x1" />
-                                 </a>
-                             </li>
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+{% verbatim %}
+<section class="container-fluid section-space" id="services" ng-controller="ourServices">
+    <div class="container">
+        <h1 class="center">About Us – TEAM FOCUSED</h1>
+        <h2 class="center spacing">When you have a trusted team to handle your accounting/book keeping and taxes, it allows you to work on building and expanding your brand of business!  We are dedicated to helping you succeed!</h2>
+        <div class="row">
+            <div class="col-md-12 col-sm-6">
+                <div class="services-icon">
+                </div>
+                <div class="w3-card-4">
+                      <header class="w3-container w3-light-grey">
+                        <h1 class="center">We Are...</h1>
 
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x2.png" alt="32x32x2" />
-                                 </a>
-                             </li>
-
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x3.png" alt="32x32x3" />
-                                 </a>
-                             </li>
-                         </ul>
-                     </div>
-                 </div>
-                 <h2 class="center h2-bottom">varius sodales</h2>
-                 <p class="center teambg-design">CEO </p>
-             </div>
-
-             <div class="col-md-3 col-sm-3 team-fixed common-res-bottom-1">
-                 <div class="teambg">
-                     <div class="zoom-area">
-                         <img src="images/400x400x2.jpg" alt="image" class="img-responsive image-center find-image" />
-                     </div>
-                     <div class="center teambg-icon-pad">
-                         <ul class="no-padding no-margin">
-                             <li class="team-social-icon">
-                                 <a href="#">
-                                     <img src="images/32x32x1.png" alt="32x32x1" />
-                                 </a>
-                             </li>
-
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x2.png" alt="32x32x2" />
-                                 </a>
-                             </li>
-
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x3.png" alt="32x32x3" />
-                                 </a>
-                             </li>
-                         </ul>
-                     </div>
-                 </div>
-                 <h2 class="center h2-bottom">taciti sociosqu</h2>
-                 <p class="center teambg-design">MANAGER </p>
-             </div>
-
-             <div class="col-md-3 col-sm-3 team-fixed common-res-bottom-1">
-                 <div class="teambg">
-                     <div class="zoom-area">
-                         <img src="images/400x400x3.jpg" alt="image" class="img-responsive image-center find-image" />
-                     </div>
-                     <div class="center teambg-icon-pad">
-                         <ul class="no-padding no-margin">
-                             <li class="team-social-icon">
-                                 <a href="#">
-                                     <img src="images/32x32x1.png" alt="32x32x1" />
-                                 </a>
-                             </li>
-
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x2.png" alt="32x32x2" />
-                                 </a>
-                             </li>
-
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x3.png" alt="32x32x3" />
-                                 </a>
-                             </li>
-                         </ul>
-                     </div>
-                 </div>
-                 <h2 class="center h2-bottom">litora tourent</h2>
-                 <p class="center teambg-design">DESIGNER </p>
-             </div>
-
-             <div class="col-md-3 col-sm-3 team-fixed">
-                 <div class="teambg">
-                     <div class="zoom-area">
-                         <img src="images/400x400x4.jpg" alt="image" class="img-responsive image-center find-image" />
-                     </div>
-                     <div class="center teambg-icon-pad">
-                         <ul class="no-padding no-margin">
-                             <li class="team-social-icon">
-                                 <a href="#">
-                                     <img src="images/32x32x1.png" alt="32x32x1" />
-                                 </a>
-                             </li>
-
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x2.png" alt="32x32x2" />
-                                 </a>
-                             </li>
-
-                             <li class="team-social-icon team-social-lr-pad">
-                                 <a href="#">
-                                     <img src="images/32x32x3.png" alt="32x32x3" />
-                                 </a>
-                             </li>
-                         </ul>
-                     </div>
-                 </div>
-                 <h2 class="center h2-bottom">conubia nostra</h2>
-                 <p class="center teambg-design">DEVELOPER </p>
-             </div>
-
-         </div>
+                      </header>
+                      <div class="w3-container" ng-repeat="team in services.team">
+                        <ul>
+                          <li  class="center"ng-cloak>{{team}}</li>
+                        </ul>
+                      </div>
+                      <footer class="w3-container w3-white">
+                      </footer>
+                  </div>
+            </div>
+              </div>
+            </div>
+</section>
+{% endverbatim %}
+ <section class="timeline">
+ <div class="wrapper">
+   <div class="timeline__item timeline__item--0">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">1987 Aug. 20</h2>
+       <p class="timeline__item__content__description">Began learning in the panel industry by working with some of Australia biggest companies including pacesetter, portacom, Ausco and James Hardies.</p>
      </div>
- </section>
+   </div>
+   <div class="timeline__item timeline__item--1">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">1998 Sept. 5</h2>
+       <p class="timeline__item__content__description">Started installing various cool rooms and freezers around the country.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--2">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">1995 Mar. 5</h2>
+       <p class="timeline__item__content__description">As well as contracting for ALL the major sandwich panel building companies, we began to take a
+keen interest in cool room construction.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--3">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">2000 July 9</h2>
+       <p class="timeline__item__content__description">On top of cool room, chassis and portable building fabrication , we begin a partnership with one of Australia's largest manufacturer of switch rooms, temperature controlled shelters and specific designed transportable rooms furthering our knowledge in this field. To date close to 9000 sandwich panel buildings have been manufactured by CMT panels with our partner.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--4">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">2003 Nov. 12</h2>
+       <p class="timeline__item__content__description">We become what we are now known as CMT Panels.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--5">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">2009 Aug. 25</h2>
+       <p class="timeline__item__content__description">We begin our part in the Gorgon project, Barrow Island WA. This was at the time one of the largest construction jobs hapenning in the world.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--6">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">2011 Aug. 03</h2>
+       <p class="timeline__item__content__description">We move premises to Thomaston in Victoria to help accommodate larger projects and expand.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--7">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">2012 Jan. 24</h2>
+       <p class="timeline__item__content__description">We begin our part on the Wheatstone project, Onslow WA, also one of the largest construction jobs in the world.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--8">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">2014 Apr. 28</h2>
+       <p class="timeline__item__content__description">Our crew of guys help with the south Melbourne market relocation.</p>
+     </div>
+   </div>
+   <div class="timeline__item timeline__item--9">
+     <div class="timeline__item__station"></div>
+     <div class="timeline__item__content">
+       <h2 class="timeline__item__content__date">2017 +</h2>
+       <p class="timeline__item__content__description">Our company continues to grow and make marks in the construction industry.</p>
+     </div>
+   </div>
+ </div>
+</section>
+{% endblock %}
+
  <!--================================= OUR SPEAKERS END =============================================-->

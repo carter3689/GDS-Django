@@ -4,7 +4,7 @@ app.controller("ourServices", function($scope){
   var services = {
     taxes:["Electronic Submittals","No Waiting","Detailed outline of required docs to expedite this service"],
     bookkeeping:["Pre approved tax loans up to $1,800.00","Direct Deposit Available","•	Annual book keeping and accounting services for your business"],
-    consulting:["Business Plan Setup","Social Media Development & Management","Marketing Strategies","Graphic Design Material","Incorporating Businesses"]
+    team:["Family friendly","Willing to start at A and work with you all the way to Z covering all your needs","Dedicated to making sure you are in the best position","Always going to provide accurate data","Licensed","Proactive in our efforts for you at all times"]
   }
   $scope.services = services;
 })
